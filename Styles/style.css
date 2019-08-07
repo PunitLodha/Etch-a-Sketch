@@ -1,0 +1,15 @@
+
+*{
+	box-sizing: border-box;
+}
+
+.container{
+	display: grid;
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	background-color: rgb(238, 232, 232);
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	grid: repeat(16,auto) / repeat(16,auto);
+}
