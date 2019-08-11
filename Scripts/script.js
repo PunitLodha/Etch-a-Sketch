@@ -1,4 +1,8 @@
 const container=document.querySelector(".container");
+const eraser=document.querySelector(".eraser");
+const draw=document.querySelector(".draw");
+
+let color="blue";
 	
 for(let i=0;i<16*16;i++)
 {
@@ -9,14 +13,15 @@ for(let i=0;i<16*16;i++)
 }
 
     
-container.addEventListener("mouseover",color);
+container.addEventListener("mouseover",colorTheGrid);
+eraser.addEventListener("click",()=>{color="rgb(238, 232, 232)"});
+draw.addEventListener("click",()=>{color="blue"});
 
-function color(e)
+function colorTheGrid(e)
 {
 	if(!e.target.classList.contains("container"))
   {
-		e.target.style.backgroundColor="blue"
-		console.log(e.target);
+		e.target.style.backgroundColor=color;
   }
 
 }
